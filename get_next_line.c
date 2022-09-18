@@ -6,7 +6,7 @@
 /*   By: ahuang <ahuang@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/08/21 15:59:34 by ahuang        #+#    #+#                 */
-/*   Updated: 2022/09/18 17:05:12 by someone       ########   odam.nl         */
+/*   Updated: 2022/09/18 17:59:33 by someone       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_aquire_line(char *store)
 	char	*membuffer;
 
 	i = 0;
-	if (!store[i]) /* protect if not stored */
+	if (!store[i])
 		return (NULL);
 	while (store[i] && store[i] != '\n')
 		i++;

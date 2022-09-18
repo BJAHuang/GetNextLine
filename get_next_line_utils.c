@@ -6,7 +6,7 @@
 /*   By: ahuang <ahuang@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/08/21 15:59:23 by ahuang        #+#    #+#                 */
-/*   Updated: 2022/09/09 11:49:58 by someone       ########   odam.nl         */
+/*   Updated: 2022/09/18 18:06:47 by someone       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,20 @@ size_t	ft_strlen(char *s)
 	return (x);
 }
 
-char	*ft_strchr(char *str_1, int c)
+char	*ft_strchr(char *str, int c)
 {
-	int	str_2;
+	int	x;
 
-	str_2 = 0;
-	if (!str_1)
+	x = 0;
+	if (!str)
 		return (0);
 	if (c == '\0')
-		return ((char *)&str_1[ft_strlen(str_1)]);
-	while (str_1[str_2] != '\0')
+		return ((char *)&str[ft_strlen(str)]);
+	while (str[x] != '\0')
 	{
-		if (str_1[str_2] == (char) c)
-			return ((char *)&str_1[str_2]);
-		str_2++;
+		if (str[x] == (char) c)
+			return ((char *)&str[x]);
+		x++;
 	}
 	return (0);
 }
@@ -69,24 +69,3 @@ char	*ft_strjoin(char *string1, char *string2)
 	free(string1);
 	return (str);
 }
-
-// This version does not use memcpy anymore -> see older version for memcpy
-// void	*ft_memcpy(void *destination, const void *source, size_t n)
-// {
-// 	char	*final_dst;
-// 	char	*start_src;
-
-// 	size_t = i;
-// 	final_dst = (char *)destination;
-// 	start_src = (char *)source;
-// 	i = 0;
-// 	if ((final_dst != NULL) && (start_src != NULL))
-// 	{
-// 		while (i < n)
-// 		{
-// 			final_dst[i] = start_src[i];
-// 			i++;
-// 		}
-// 	}
-// 	return (destination);
-// }
